@@ -9,7 +9,7 @@ export const signinAPI = async (payload: LoginRequestBody) => {
       "/QuanLyNguoiDung/DangNhap",
       payload
     );
-    return response.data.content;
+    return response.data.content; // AxiosResponse
   } catch (error) {
     throw "Lỗi rồi 🤧";
   }

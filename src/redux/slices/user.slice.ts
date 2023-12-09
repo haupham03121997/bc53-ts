@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { CurrentUser } from "../../types/user.type";
 import { getLocalStorage } from "../../helpers/helpers";
 
@@ -16,7 +16,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setCurrentUser: (state, { payload }) => {
+    setCurrentUser: (state, { payload }: PayloadAction<CurrentUser | null>) => {
       state.currentUser = payload;
     },
   },
